@@ -1,48 +1,87 @@
 package SecondQuestion;
 
 public class Dizi {
+	
+		public static void main(String[] args) {
+			Diziler dizi = new Diziler();
+			dizi.Ekleme(1);
+			dizi.Ekleme(6);
+			dizi.Ekleme(7);
+			dizi.Ekleme(9);
+			dizi.Ekleme(10);
+			System.out.print("-");
+			dizi.DiziyiGoster();
+			System.out.print("-");
+			dizi.ArayaSayiEkle(5, 3);
+			System.out.print("-");
+			dizi.DiziyiGoster();
+			System.out.print("-");
+			dizi.DizidenCikar(1);
+			System.out.print("-");
+			dizi.DiziyiGoster();;
+			System.out.print("-");	}
 
-	public int[] SonunaElemanEkle(int[] OldArray, int sayi) {
-		int[] newArray = new int[OldArray.length + 1];
-			for (int i = 0; i < OldArray.length; i++) 
-	{
-				newArray[i] = OldArray[i];
-	}
-		newArray[OldArray.length] = sayi;
-		return newArray;
-	}
+	
+	
+	public static class Diziler {
 
-	public int[] ElemanEkle(int[] OldArray, int index, int sayi) {
-		int[] newArray = new int[OldArray.length + 1];
-			for (int i = 0; i < OldArray.length; i++) {
-				if (i == index) {
-				newArray[i] = sayi;
-			} else if (i > index)
-				newArray[i] = OldArray[i - 1];
-			else
-				newArray[i] = OldArray[i];
+		int[] dizi = new int[0];
+		int[] temp;
+
+		public void Ekleme(int sayi) {
+
+			temp = new int[dizi.length + 1];
+
+			for (int i = 0; i < dizi.length; i++) {
+
+				temp[i] = dizi[i];
+			}
+			temp[dizi.length] = sayi;
+			dizi = temp;
+
 		}
-		if (index < OldArray.length)
-			newArray[OldArray.length] = OldArray[OldArray.length - 1];
-		else
-			newArray[OldArray.length] = sayi;
-		return newArray;
-	}
+		public void ArayaSayiEkle(int sayi, int index) {
+			temp = new int[dizi.length + 1];
 
+			for (int i = 0; i < index; i++) {
 
-	public int[] ElemanSil(int[] OldArray, int index) {
-		int[] newArray = new int[OldArray.length - 1];
-		for (int i = 0; i < newArray.length; i++) {
-		if (i >= index) {
-		newArray[i] = OldArray[i + 1];
-		} else
-		newArray[i] = OldArray[i];
+				temp[i] = dizi[i];
+			}
+			temp[index] = sayi;
+
+			for (int i = index; i < dizi.length; i++) {
+				temp[i + 1] = dizi[i];
+			}
+			dizi = temp;
+
 		}
-		return newArray;
+
+		public void DizidenCikar(int index) {
+
+			temp = new int[dizi.length - 1];
+			for (int i = 0; i < temp.length; i++) {
+
+				if (i >= index) {
+					temp[i] = dizi[i + 1];
+				} else {
+					temp[i] = dizi[i];
+				}
+			}
+
+			dizi = temp;
+
+		}
+
+		public void DiziyiGoster() {
+
+			for (int i : dizi) {
+				System.out.print(i);
+				
+			}
+
+		}
+
+		
 	}
 
-	public void DiziGoruntule(int[] dizi) {
-	for (int index : dizi)
-	System.out.println(index);
-	}
 }
