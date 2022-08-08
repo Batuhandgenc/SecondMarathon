@@ -15,15 +15,18 @@ public class Musteri extends Kullanici {
         rentedBooks = new ArrayList<KitapKiralama>();
     }
 
-    public static KutuphaneYonet getBookDirectory() {
-        return kutuphaneYonet;
-    }
+    
+    public static KutuphaneYonet getKutuphaneYonet() {
+		return kutuphaneYonet;
+	}
 
-    public static void setKutuphaneYonet(KutuphaneYonet k) {
-        Musteri.kutuphaneYonet = kutuphaneYonet;
-    }
 
-    public ArrayList<KitapKiralama> getRentedBooks() {
+	public static void setKutuphaneYonet(KutuphaneYonet kutuphaneYonet) {
+		Musteri.kutuphaneYonet = kutuphaneYonet;
+	}
+
+
+	public ArrayList<KitapKiralama> getRentedBooks() {
         return rentedBooks;
     }
 

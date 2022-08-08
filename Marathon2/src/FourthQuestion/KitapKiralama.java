@@ -6,6 +6,7 @@ import java.time.Period;
 public class KitapKiralama {
     private Musteri musteri;
     private Kitap Kitap;
+    private Musteri id;
     LocalDate kiralamaGunu;
     Period period;
 
@@ -15,36 +16,46 @@ public class KitapKiralama {
         this.period = period;
         kiralamaGunu = LocalDate.now();
     }
+   
+    public Musteri getId() {
+		return id;
+	}
 
-    public Musteri getMusteri() {
-        return musteri;
-    }
+	public void setId(Musteri id) {
+		this.id = id;
+	}
 
-    public void setMusteri(Musteri musteri) {
-        this.musteri = musteri;
-    }
+	public Musteri getMusteri() {
+		return musteri;
+	}
 
-    public Kitap getKitap() {
-        return Kitap;
-    }
+	public void setMusteri(Musteri musteri) {
+		this.musteri = musteri;
+	}
 
-    public void setKitap(Kitap kitap) {
-        this.Kitap = kitap;
-    }
+	public Kitap getKitap() {
+		return Kitap;
+	}
 
-    public LocalDate getKiralamaGunu() {
-        return kiralamaGunu;
-    }
+	public void setKitap(Kitap kitap) {
+		Kitap = kitap;
+	}
 
-    public void setKiralamaGunu(LocalDate kiralamaGunu) {
-        this.kiralamaGunu = kiralamaGunu;
-    }
+	public LocalDate getKiralamaGunu() {
+		return kiralamaGunu;
+	}
 
-    public Period getPeriod() {
-        return period;
-    }
+	public void setKiralamaGunu(LocalDate kiralamaGunu) {
+		this.kiralamaGunu = kiralamaGunu;
+	}
 
-    public void setPeriod(Period period) {
-        this.period = period;
-    }
+	public Period getPeriod() {
+		return period;
+	}
+
+	public void setPeriod(Period period) {
+		this.period = period;
+	}
+
+	
 }

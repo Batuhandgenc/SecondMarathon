@@ -13,10 +13,10 @@ public class KitapAra {
         this.dir = tree;
     }
 
-    public List<Kitap> search(String state) {
+    public List<Kitap> search(String durum) {
         List<Kitap> results = new ArrayList<Kitap>();
         for (Kitap a : dir.TumKitaplar()) {
-            if (a.getClass().getName().equals(state) || a.kitapBasligi().equals(state))
+            if (a.getClass().getName().equals(durum) || a.kitapBasligi().equals(durum))
                 results.add(a);
         }
         return results;
