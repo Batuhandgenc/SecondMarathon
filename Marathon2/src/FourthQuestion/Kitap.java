@@ -5,7 +5,7 @@ public class Kitap {
     private KitapBasligi kitapBasligi;
     private int id;
 
-    public Kitap(KitapBasligi bookTitle, int id) {
+    public Kitap(KitapBasligi bookTitle, int id, KitapBasligi kitapBasligi) {
         this.kitapBasligi = kitapBasligi;
         this.id = id;
     }

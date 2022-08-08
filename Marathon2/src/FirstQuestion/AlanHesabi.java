@@ -4,23 +4,22 @@ public class AlanHesabi {
 	 public static void main(String[] args) {
 
 		
-		Scanner gir = new Scanner(System.in);
-		
-		
-		System.out.println("Dairenin Çapını Giriniz ");
-		double cap = gir.nextDouble();
-		System.out.println("Dikdörtgenin uzunluğunu giriniz");
-		double uzunluk = gir.nextDouble();
-		System.out.println("Dikdörtgenin genişliğini giriniz");
-		double genislik = gir.nextDouble();
-		System.out.println("Üçgenin yüksekliğini giriniz");
-		double yukseklik = gir.nextDouble();
-		System.out.println("Üçgenin tabanını giriniz");
-		double taban = gir.nextDouble();
-		
-		System.err.println("Daire alanı =" + DaireAlani(cap));
-		System.err.println("Dikdörtgenin alanı =" + KareAlani(uzunluk, genislik));
-		System.err.println("Üçgenin alanı" + UcgenAlani(yukseklik, taban));
+		try (Scanner gir = new Scanner(System.in)) {
+			System.out.println("Dairenin Çapını Giriniz ");
+			double cap = gir.nextDouble();
+			System.out.println("Dikdörtgenin uzunluğunu giriniz");
+			double uzunluk = gir.nextDouble();
+			System.out.println("Dikdörtgenin genişliğini giriniz");
+			double genislik = gir.nextDouble();
+			System.out.println("Üçgenin yüksekliğini giriniz");
+			double yukseklik = gir.nextDouble();
+			System.out.println("Üçgenin tabanını giriniz");
+			double taban = gir.nextDouble();
+			
+			System.err.println("Daire alanı =" + DaireAlani(cap));
+			System.err.println("Dikdörtgenin alanı =" + KareAlani(uzunluk, genislik));
+			System.err.println("Üçgenin alanı" + UcgenAlani(yukseklik, taban));
+		}
 		
 		}
 

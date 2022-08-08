@@ -1,10 +1,10 @@
 package ThirdQuestion;
 
-import java.util.Locale;
+
 import java.util.Scanner;
 
 public class Degiskenler {
-	String Dizi = "ikinci soru bir miktar uğraştırdı";
+	String Dizi = "Besinci Soru Databesi'i yordu";
 		public void Uzunluk() {
 		int uzunluk=Dizi.length();
 		System.out.println(uzunluk);

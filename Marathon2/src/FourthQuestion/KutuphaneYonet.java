@@ -1,13 +1,9 @@
 package FourthQuestion;
 
-import FourthQuestion.Musteri;
 
-import java.io.FileWriter;
-import java.io.IOException;
-import java.time.LocalTime;
-import java.time.Period;
+
+
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 
@@ -16,7 +12,7 @@ public class KutuphaneYonet {
     private HashSet<KitapBasligi> kitapBasligi;
 
     public void addBook(KitapBasligi kitapBasligi, int id) {
-        Kitap yeniKitap = new Kitap(kitapBasligi, id);
+        Kitap yeniKitap = new Kitap(kitapBasligi, id, kitapBasligi);
         kitaplar.add(yeniKitap);
     }
 
